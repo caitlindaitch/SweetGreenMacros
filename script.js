@@ -7,12 +7,13 @@ angular
 function MacrosControllerFunc() {
   var macros = this;
 
-  macros.chicken = {
-    name: "Chicken",
+  macros.blackenedChicken = {
+    name: "Blackened Chicken",
     calories: 130,
-    fat: 5,
-    protein: 22,
-    carbs: 0,
+    fat: 6,
+    protein: 17,
+    carbs: 1,
+    fiber: 2,
     checked: false
   };
 
@@ -22,15 +23,17 @@ function MacrosControllerFunc() {
     fat: 2,
     protein: 5,
     carbs: 26,
+    fiber: 2,
     checked: false
   };
 
-  macros.potatoes = {
+  macros.sweetPotatoes = {
     name: "Sweet potatoes",
-    calories: 40,
+    calories: 70,
     fat: 1,
     protein: 1,
-    carbs: 8,
+    carbs: 13,
+    fiber: 2,
     checked: false
   };
 
@@ -40,6 +43,7 @@ function MacrosControllerFunc() {
     fat: 1,
     protein: 3,
     carbs: 9,
+    fiber: 2,
     checked: false
   };
 
@@ -49,6 +53,7 @@ function MacrosControllerFunc() {
     fat: 0,
     protein: 0,
     carbs: 4,
+    fiber: 1,
     checked: false
   };
 
@@ -58,6 +63,7 @@ function MacrosControllerFunc() {
     fat: 0,
     protein: 1,
     carbs: 5,
+    fiber: 1,
     checked: false
   };
 
@@ -67,6 +73,7 @@ function MacrosControllerFunc() {
     fat: 10,
     protein: 1,
     carbs: 1,
+    fiber: 0,
     checked: false
   };
 
@@ -76,6 +83,7 @@ function MacrosControllerFunc() {
     fat: 7,
     protein: 10,
     carbs: 0,
+    fiber: 0,
     checked: false
   };
 
@@ -85,6 +93,7 @@ function MacrosControllerFunc() {
     fat: 0,
     protein: 0,
     carbs: 2,
+    fiber: 1,
     checked: false
   };
 
@@ -92,27 +101,29 @@ function MacrosControllerFunc() {
   macros.protein = 0;
   macros.carbs = 0;
   macros.fat = 0;
+  macros.fiber = 0
 
   macros.calculate = function() {
     calculate("calories");
     calculate("carbs");
     calculate("fat");
     calculate("protein");
+    calculate("fiber");
   };
 
   function calculate(macro) {
     var total = 0;
 
-    if (macros.chicken.checked) {
-      total += macros.chicken[macro];
+    if (macros.blackenedChicken.checked) {
+      total += macros.blackenedChicken[macro];
     }
 
     if (macros.rice.checked) {
       total += macros.rice[macro];
     }
 
-    if (macros.potatoes.checked) {
-      total += macros.potatoes[macro];
+    if (macros.sweetPotatoes.checked) {
+      total += macros.sweetPotatoes[macro];
     }
 
     if (macros.kale.checked) {
@@ -133,6 +144,10 @@ function MacrosControllerFunc() {
 
     if (macros.parmCrisps.checked) {
       total += macros.parmCrisps[macro]
+    }
+
+    if (macros.tomatoes.checked) {
+      total += macros.tomatoes[macro]
     }
 
     macros[macro] = total;

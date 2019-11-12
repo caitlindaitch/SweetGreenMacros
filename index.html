@@ -15,8 +15,8 @@
   <body ng-app="macrosCalculator" ng-controller="macrosController as macros">
     <div class="content">
       <h1>SweetGreen Macros Calculator</h1>
-      <input type="checkbox" ng-model="macros.chicken.checked" ng-change="macros.calculate()" /> {{macros.chicken.name}}<br>
-      <input type="checkbox" ng-model="macros.potatoes.checked" ng-change="macros.calculate()" /> {{macros.potatoes.name}}<br>
+      <input type="checkbox" ng-model="macros.blackenedChicken.checked" ng-change="macros.calculate()" /> {{macros.blackenedChicken.name}}<br>
+      <input type="checkbox" ng-model="macros.sweetPotatoes.checked" ng-change="macros.calculate()" /> {{macros.sweetPotatoes.name}}<br>
       <input type="checkbox" ng-model="macros.rice.checked" ng-change="macros.calculate()" /> {{macros.rice.name}}<br>
       <input type="checkbox" ng-model="macros.kale.checked" ng-change="macros.calculate()" /> {{macros.kale.name}}<br>
       <input type="checkbox" ng-model="macros.apple.checked" ng-change="macros.calculate()" /> {{macros.apple.name}}<br>
@@ -28,6 +28,7 @@
       <p><b>Protein:</b> {{macros.protein}}</p>
       <p><b>Carbs:</b> {{macros.carbs}}</p>
       <p><b>Fat:</b> {{macros.fat}}</p>
+      <p><b>Fiber:</b> {{macros.fiber}}</p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script src="./script.js"></script>
