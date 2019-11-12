@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SweetGreen Macros Calculator</title>
+    <meta name="description" content="SweetGreen Macros Calculator">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+      .content {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body ng-app="macrosCalculator" ng-controller="macrosController as macros">
+    <div class="content">
+      <h1>SweetGreen Macros Calculator</h1>
+      <input type="checkbox" ng-model="macros.chicken.checked" ng-change="macros.calculate()" /> {{macros.chicken.name}}<br>
+      <input type="checkbox" ng-model="macros.potatoes.checked" ng-change="macros.calculate()" /> {{macros.potatoes.name}}<br>
+      <input type="checkbox" ng-model="macros.rice.checked" ng-change="macros.calculate()" /> {{macros.rice.name}}<br>
+      <input type="checkbox" ng-model="macros.kale.checked" ng-change="macros.calculate()" /> {{macros.kale.name}}<br>
+      <input type="checkbox" ng-model="macros.apple.checked" ng-change="macros.calculate()" /> {{macros.apple.name}}<br>
+      <input type="checkbox" ng-model="macros.pear.checked" ng-change="macros.calculate()" /> {{macros.pear.name}}<br>
+      <input type="checkbox" ng-model="macros.caesarDressing.checked" ng-change="macros.calculate()" /> {{macros.caesarDressing.name}}<br>
+      <input type="checkbox" ng-model="macros.parmCrisps.checked" ng-change="macros.calculate()" /> {{macros.parmCrisps.name}}<br>
+      <input type="checkbox" ng-model="macros.tomatoes.checked" ng-change="macros.calculate()" /> {{macros.tomatoes.name}}<br>
+      <p><b>Calories:</b> {{macros.calories}}</p>
+      <p><b>Protein:</b> {{macros.protein}}</p>
+      <p><b>Carbs:</b> {{macros.carbs}}</p>
+      <p><b>Fat:</b> {{macros.fat}}</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
